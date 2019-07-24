@@ -24,12 +24,8 @@
         "root": [ "./" ],
         "alias": {
           "@helpers": "/helpers",
-          "@components": "./src/components",
-          "@pages": "./src/frontend/pages",
-          "@atoms": "frontend/components/atoms",
-          "@molecules": "./src/frontend/components/molecules",
-          "@organisms": "./src/frontend/components/organisms",
-          "@variables": "./src/frontend/resources/variables"
+          "@components": "./src/frontend/components",
+          "@images": "./src/frontend/resources/images"
         }
       }
     ],
