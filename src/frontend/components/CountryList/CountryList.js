@@ -1,10 +1,29 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { listOfCountries } from './listOfCountries'
 
-const List = styled.ul`
-  /* margin: 8px; */
+const handleClick = (country) => {
+  console.log(country)
+}
+const CountryList = () => {
+// set selected country in state
+  const [ country, selectCountry ] = useState('United Kingdom')
 
+  return (
+    <List>
+      { listOfCountries.map(country => (
+        <li onClick={() => selectCountry(`${country.title}`)(handleClick())}>
+          <img src={require(`../../resources/images/${country.flag}.svg`)} alt={`a ${country.flag} flag`} width='40' />
+          <span>{ country.title } </span>
+        </li>
+      ))}
+    </List>
+  )
+}
+
+export default CountryList
+
+const List = styled.ul`
   li {
     display: flex;
     align-items: center; 
@@ -21,24 +40,3 @@ const List = styled.ul`
     margin-right: 16px;
   }
 `
-
-class CountryList extends Component {
-  handleClick = () => {
-    console.log('flag clicked')
-  }
-
-  render () {
-    return (
-      <List>
-        { listOfCountries.map(country => (
-          <li onClick={this.handleClick}>
-            <img src={require(`../../resources/images/${country.flag}.svg`)} alt={`a ${country.flag} flag`} width='40' />
-            <span>{ country.title } </span>
-          </li>
-        ))}
-      </List>
-    )
-  }
-}
-
-export default CountryList
