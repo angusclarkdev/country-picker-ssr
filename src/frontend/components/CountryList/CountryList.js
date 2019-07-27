@@ -10,6 +10,7 @@ const List = styled.ul`
     align-items: center; 
     margin: 16px 8px;
     cursor: pointer;
+    width: fit-content;
   }
 
   span {
@@ -22,11 +23,15 @@ const List = styled.ul`
 `
 
 class CountryList extends Component {
+  handleClick = () => {
+    console.log('flag clicked')
+  }
+
   render () {
     return (
       <List>
         { listOfCountries.map(country => (
-          <li>
+          <li onClick={this.handleClick}>
             <img src={require(`../../resources/images/${country.flag}.svg`)} alt={`a ${country.flag} flag`} width='40' />
             <span>{ country.title } </span>
           </li>
