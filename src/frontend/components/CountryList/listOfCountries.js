@@ -1,43 +1,43 @@
 export const listOfCountries = [
   { title: 'United Kingdom',
-    flag: 'UK'
+    flag: 'uk'
   },
   {
     title: 'United States',
-    flag: 'USA'
-  }
-  // {
-  //   title: 'Hong Kong SAR China',
-  //   flag: undefined
-  // },
-  // {
-  //   title: 'Japan',
-  //   flag: undefined
-  // },
+    flag: 'usa'
+  },
+  {
+    title: 'Hong Kong SAR China',
+    flag: 'hk'
+  },
+  {
+    title: 'Japan',
+    flag: 'jap'
+  },
   // {
   //   title: 'France',
   //   flag: undefined
   // },
-  // {
-  //   title: 'Singapore',
-  //   flag: undefined
-  // },
-  // {
-  //   title: 'Germany',
-  //   flag: undefined
-  // },
-  // {
-  //   title: 'Denmark',
-  //   flag: undefined
-  // },
-  // {
-  //   title: 'Russia',
-  //   flag: undefined
-  // },
+  {
+    title: 'Singapore',
+    flag: 'sing'
+  },
+  {
+    title: 'Germany',
+    flag: 'ger'
+  },
+  {
+    title: 'Denmark',
+    flag: 'den'
+  },
+  {
+    title: 'Russia',
+    flag: 'rus'
+  }
   // {
   //   title: 'China',
-  //   flag: undefined
-  // },
+  //   flag: 'chi'
+  // }
   // {
   //   title: 'Taiwan',
   //   flag: undefined
