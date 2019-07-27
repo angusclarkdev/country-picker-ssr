@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const postcssNormalize = require('postcss-normalize')
 
 module.exports = {
   entry: './src/index.js',
@@ -15,6 +16,10 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.png|svg?$/,
+        use: { loader: 'file-loader' }
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -38,7 +43,10 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              parser: 'postcss-scss'
+              parser: 'postcss-scss',
+              plugins: () => {
+                postcssNormalize()
+              }
             }
           },
           {
