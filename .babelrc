@@ -25,7 +25,8 @@
         "alias": {
           "@helpers": "/helpers",
           "@components": "./src/frontend/components",
-          "@images": "./src/frontend/resources/images"
+          "@images": "./src/frontend/resources/images",
+          "@pages": "./src/frontend/pages"
         }
       }
     ],
